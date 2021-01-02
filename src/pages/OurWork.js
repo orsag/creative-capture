@@ -18,10 +18,10 @@ const OurWork = () => {
             style={{ background: '#fff' }}
         >
             <motion.div variants={sliderContainer}>
-                <Frame1 variants={sliderAnimation} />
-                <Frame2 variants={sliderAnimation} />
-                <Frame3 variants={sliderAnimation} />
-                <Frame4 variants={sliderAnimation} />
+                <Frame1 variants={sliderAnimation}></Frame1>
+                <Frame2 variants={sliderAnimation}></Frame2>
+                <Frame3 variants={sliderAnimation}></Frame3>
+                <Frame4 variants={sliderAnimation}></Frame4>
             </motion.div>
             <Movie>
                 <motion.h2 variants={fadeAnimation}>The Athlete</motion.h2>
