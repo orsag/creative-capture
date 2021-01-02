@@ -5,21 +5,31 @@ import goodtimes from '../img/goodtimes-small.png'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 //Animations
-import { pageAnimation } from '../animation'
+import { pageAnimation, fadeAnimation, photoAnimation, lineAnimation, sliderAnimation, sliderContainer } from '../animation'
 import { motion } from 'framer-motion'
 
 const OurWork = () => {
     return (
-        <Work variants={pageAnimation}
-              initial="hidden"
-              animate="show"
-              exit="exit"
-              style={{ background: '#fff' }}>
+        <Work
+            variants={pageAnimation}
+            initial="hidden"
+            animate="show"
+            exit="exit"
+            style={{ background: '#fff' }}
+        >
+            <motion.div variants={sliderContainer}>
+                <Frame1 variants={sliderAnimation} />
+                <Frame2 variants={sliderAnimation} />
+                <Frame3 variants={sliderAnimation} />
+                <Frame4 variants={sliderAnimation} />
+            </motion.div>
             <Movie>
-                <h2>The Athlete</h2>
-                <div className="line"></div>
+                <motion.h2 variants={fadeAnimation}>The Athlete</motion.h2>
+                <motion.div className="line" variants={lineAnimation}></motion.div>
                 <Link to="/work/the-athlete">
-                    <img src={athlete} alt="athlete"/>
+                    <Hide>
+                        <motion.img variants={photoAnimation} src={athlete} alt="athlete"/>
+                    </Hide>
                 </Link>
             </Movie>
             <Movie>
@@ -53,7 +63,7 @@ const Movie = styled.div`
   padding-bottom: 10rem;
   .line {
     height: 0.5rem;
-    background: #cccccc;
+    background: #23d997;
     margin-bottom: 3rem;
   }
   img {
@@ -61,6 +71,33 @@ const Movie = styled.div`
     height: 70vh;
     object-fit: cover;
   }
+`;
+
+const Hide = styled.div`
+  overflow: hidden;
+`;
+
+// Frame animation
+const Frame1 = styled(motion.div)`
+  position: fixed;
+  left: 0;
+  top: 10%;
+  width: 100%;
+  height: 100vh;
+  background: #fffebf;
+  z-index: 2;
+`;
+
+const Frame2 = styled(Frame1)`
+  background: #ff8efb;
+`;
+
+const Frame3 = styled(Frame1)`
+  background: #8ed2ff;
+`;
+
+const Frame4 = styled(Frame1)`
+  background: #8effa0;
 `;
 
 export default OurWork;

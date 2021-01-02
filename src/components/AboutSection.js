@@ -3,6 +3,7 @@ import home1 from '../img/home1.png'
 import {AboutRoot, Description, Image, Hide} from '../styles'
 import {motion} from 'framer-motion'
 import { titleAnimation, fadeAnimation, photoAnimation } from '../animation'
+import Wave from './Wave'
 
 const AboutSection = () => {
     // const titleAnimation = {
@@ -36,8 +37,11 @@ const AboutSection = () => {
                     src={home1}
                     alt="guy with a camera"
                     variants={photoAnimation}
+                    // initial="hidden"
+                    // animate="show"
                 />
             </Image>
+            <Wave />
         </AboutRoot>
     )
 }
