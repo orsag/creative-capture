@@ -11,6 +11,7 @@ import {useScroll} from "../components/useScroll";
 import ScrollTop from "../components/ScrollTop";
 
 const OurWork = () => {
+    const [element0, controls0] = useScroll();
     const [element1, controls1] = useScroll();
     const [element2, controls2] = useScroll();
 
@@ -22,14 +23,14 @@ const OurWork = () => {
             exit="exit"
             style={{ background: '#fff' }}
         >
-            <motion.div variants={sliderContainer}>
+            <motion.div variants={sliderContainer} initial="hidden" animate="show">
                 <Frame1 variants={sliderAnimation}></Frame1>
                 <Frame2 variants={sliderAnimation}></Frame2>
                 <Frame3 variants={sliderAnimation}></Frame3>
                 <Frame4 variants={sliderAnimation}></Frame4>
             </motion.div>
-            <Movie initial="show">
-                <motion.h2 variants={fadeAnimation}>The Athlete</motion.h2>
+            <Movie ref={element0} variants={fadeAnimation} animate={controls0} initial="hidden">
+                <motion.h2>The Athlete</motion.h2>
                 <motion.div className="line" variants={lineAnimation} initial="hidden" animate="show"></motion.div>
                 <Link to="/work/the-athlete">
                     <Hide>
