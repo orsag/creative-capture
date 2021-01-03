@@ -16,29 +16,29 @@ const FaqSection = () => {
             <AnimateSharedLayout>
                 <Toggle title="How do I start?">
                     <div className="answer">
-                        <motion.p variants={fadeAnimation}>Lorem ipsum dolor sit amet.</motion.p>
-                        <motion.p variants={fadeAnimation}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, iure.</motion.p>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, iure.</p>
                     </div>
                 </Toggle>
                 <Toggle title="Daily Schedule?">
                     <div className="answer">
-                        <motion.p variants={fadeAnimation}>Lorem ipsum dolor sit amet.</motion.p>
-                        <motion.p variants={fadeAnimation}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, iure.</motion.p>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, iure.</p>
                     </div>
                 </Toggle>
                 <Toggle title="Different Payment Methods?">
                     <div className="answer">
-                        <motion.p variants={fadeAnimation}>Lorem ipsum dolor sit amet.</motion.p>
-                        <motion.p variants={fadeAnimation}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aperiam, at blanditiis dolor
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aperiam, at blanditiis dolor
                             dolorum fuga in ipsa itaque
                             laborum magnam obcaecati placeat porro provident rem repellendus ullam unde vel
-                            voluptatibus.</motion.p>
+                            voluptatibus.</p>
                     </div>
                 </Toggle>
                 <Toggle title="What product do you offer?">
                     <div className="answer">
-                        <motion.p variants={fadeAnimation}>Lorem ipsum dolor sit amet.</motion.p>
-                        <motion.p variants={fadeAnimation}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, iure.</motion.p>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, iure.</p>
                     </div>
                 </Toggle>
             </AnimateSharedLayout>
